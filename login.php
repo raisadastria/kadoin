@@ -49,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     } elseif ($user["role"] === "admin") {
                         $redirect_to = BASE_URL . "admin/";
                     }
+
                     redirect($redirect_to);
                 } else {
                     $login_error = "Password salah.";
@@ -56,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 $login_error = "Akun dengan email tersebut tidak ditemukan.";
             }
+
             $stmt->close();
         } else {
             $login_error = "Terjadi kesalahan pada server. Silakan coba lagi.";
@@ -63,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -73,42 +76,74 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/img/CSS/style.css">
 </head>
 <body class="auth-page">
+
     <div class="left-panel">
         <img src="assets/img/logo.png" alt="Bouquet Ilustrasi KadoIn">
+
         <div class="logo-text">
             <div class="top">Selamat Datang Kembali di</div>
             <div class="bottom">KADOIN.</div>
         </div>
     </div>
+
     <div class="right-panel">
         <h1>Welcome Back!</h1>
         <p class="subtitle">Silakan login untuk melanjutkan belanja.</p>
 
         <?php if ($notification_data && $notification_data['type'] == 'success'): ?>
-            <p class="notification-message"><?php echo htmlspecialchars($notification_data['message']); ?></p>
+            <p class="notification-message">
+                <?php echo htmlspecialchars($notification_data['message']); ?>
+            </p>
         <?php endif; ?>
 
         <?php if (!empty($login_error)): ?>
-            <p class="login-error-message"><?php echo htmlspecialchars($login_error); ?></p>
+            <p class="login-error-message">
+                <?php echo htmlspecialchars($login_error); ?>
+            </p>
         <?php endif; ?>
 
         <form method="POST" action="login.php">
+
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email_input); ?>" required>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    value="<?php echo htmlspecialchars($email_input); ?>" 
+                    placeholder="email@example.com"
+                    required
+                >
             </div>
+
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Minimal 6 karakter"
+                    required
+                >
             </div>
-            <button class="login-btn" type="submit">Login</button>
+
+            <button class="login-btn" type="submit">
+                Login
+            </button>
+
             <div class="create-account">
-                Belum punya akun? <a href="register.php">Buat akun baru</a>
+                Belum punya akun? 
+                <a href="register.php">Buat akun baru</a>
             </div>
+
             <div class="back-to-home">
-                <a href="<?php echo BASE_URL; ?>">Kembali ke Beranda</a>
+                <a href="<?php echo BASE_URL; ?>">
+                    Kembali ke Beranda
+                </a>
             </div>
+
         </form>
     </div>
+
 </body>
 </html>
