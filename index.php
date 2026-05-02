@@ -36,7 +36,7 @@ require_once 'includes/header.php'; // Memuat header utama (navigasi, logo, dll.
                       font-size: 1.1em;
                       box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
                       transition: transform 0.2s, box-shadow 0.2s;">
-                Shop Now
+                Find Your Gift
             </a>
         </div>
         <div class="hero-image" style="max-width: 45%;">
@@ -50,7 +50,7 @@ require_once 'includes/header.php'; // Memuat header utama (navigasi, logo, dll.
 <section class="featured-products-section" style="padding: 60px 20px; text-align: center; background-color: #fff;">
     <div class="container" style="max-width: 1200px; margin:auto;">
         <h2 style="font-size: 50px; margin-bottom: 25px; color: #333333; text-align: center; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
-            Gift For Every Occasion
+            Gifts for Every Moment
         </h2>
         
         <?php
@@ -148,15 +148,15 @@ require_once 'includes/header.php'; // Memuat header utama (navigasi, logo, dll.
 <section class="stats-section" style="background-color: #F8F0FF; padding: 50px 20px; text-align: center;">
     <div class="container" style="max-width:900px; margin:auto; display: flex; justify-content: space-around; align-items: center; flex-wrap:wrap; gap:20px;">
         <div class="stat-item" style="min-width: 200px;">
-            <h3 style="font-size: 2.8em; color: #77569a; margin: 0 0 5px 0; font-weight: 700;">5.000+</h3>
+            <h3 style="font-size: 2.8em; color: #77569a; margin: 0 0 5px 0; font-weight: 700;">8.500+</h3>
             <p style="margin: 0; color: #555; font-size: 1.1em;">Happy Customers</p>
         </div>
         <div class="stat-item" style="min-width: 200px;">
-            <h3 style="font-size: 2.8em; color: #77569a; margin: 0 0 5px 0; font-weight: 700;">1.000+</h3>
+            <h3 style="font-size: 2.8em; color: #77569a; margin: 0 0 5px 0; font-weight: 700;">2.000+</h3>
             <p style="margin: 0; color: #555; font-size: 1.1em;">Products Delivered</p>
         </div>
         <div class="stat-item" style="min-width: 200px;">
-            <h3 style="font-size: 2.8em; color: #77569a; margin: 0 0 5px 0; font-weight: 700;">5+</h3>
+            <h3 style="font-size: 2.8em; color: #77569a; margin: 0 0 5px 0; font-weight: 700;">7+</h3>
             <p style="margin: 0; color: #555; font-size: 1.1em;">Years Experience</p>
         </div>
     </div>

@@ -38,7 +38,7 @@ session_destroy();
         <div class="logout-box">
             <div class="spinner"></div>
             <h2>Logout Berhasil</h2>
-            <p>Anda telah berhasil keluar dari akun Anda.</p>
+            <p>Anda telah berhasil keluar dari akun.</p>
             <p class="redirect-info">Anda akan diarahkan kembali ke halaman utama dalam beberapa detik...</p>
             <a href="<?php echo BASE_URL; ?>" class="home-link">Kembali Sekarang</a>
         </div>
