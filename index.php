@@ -50,7 +50,11 @@ require_once 'includes/header.php'; // Memuat header utama (navigasi, logo, dll.
 <section class="featured-products-section" style="padding: 60px 20px; text-align: center; background-color: #fff;">
     <div class="container" style="max-width: 1200px; margin:auto;">
         <h2 style="font-size: 50px; margin-bottom: 25px; color: #333333; text-align: center; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+raisa-login
             Gifts for Every Moment
+
+            Gift For Every Moment
+main
         </h2>
         
         <?php
