@@ -54,7 +54,6 @@ require_once 'includes/header.php'; // Memuat header utama (navigasi, logo, dll.
             Gifts for Every Moment
 
             Gift For Every Moment
-main
         </h2>
         
         <?php
