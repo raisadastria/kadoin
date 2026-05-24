@@ -181,7 +181,7 @@ if (isset($conn) && $conn instanceof mysqli) {
         <?php if (!empty($error_message)): ?>
             <p class="error-message"><?php echo htmlspecialchars($error_message); ?></p>
         <?php endif; ?>
-        <form action="login.php" method="POST"> <div>
+        <form action="loginAdm.php" method="POST"> <div>
                 <label for="email">Email Admin:</label>
                 <input type="email" id="email" name="email" required value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
             </div>

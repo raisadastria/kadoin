@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="auth-page">
 
     <div class="left-panel">
-        <img src="assets/img/logo.png" alt="Bouquet Ilustrasi KadoIn">
+        <img src="assets/img/bunga.png" alt="Bouquet Ilustrasi KadoIn">
 
         <div class="logo-text">
             <div class="top">Selamat Datang Kembali di</div>
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="right-panel">
         <h1>Welcome Back!</h1>
-        <p class="subtitle">Silakan login untuk melanjutkan belanja.</p>
+        <p class="subtitle">Silakan login, hadiah menanti kamu!</p>
 
         <?php if ($notification_data && $notification_data['type'] == 'success'): ?>
             <p class="notification-message">
