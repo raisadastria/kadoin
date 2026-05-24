@@ -106,7 +106,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="password">Password</label>
                 <div class="password-wrapper">
                     <input type="password" id="password" name="password" required aria-describedby="passwordHelp" />
-                    <span class="toggle-password" onclick="togglePass('password', this)">👁️</span>
+                    <span class="toggle-password" onclick="togglePass('password', 'icon-show-pw', 'icon-hide-pw')">
+                        <svg id="icon-show-pw" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg id="icon-hide-pw" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </span>
                 </div>
                 <small id="passwordHelp">Minimal 6 karakter.</small>
             </div>
@@ -114,7 +123,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="konfirmasi_password">Konfirmasi Password</label>
                 <div class="password-wrapper">
                     <input type="password" id="konfirmasi_password" name="konfirmasi_password" required />
-                    <span class="toggle-password" onclick="togglePass('konfirmasi_password', this)">👁️</span>
+                    <span class="toggle-password" onclick="togglePass('konfirmasi_password', 'icon-show-kpw', 'icon-hide-kpw')">
+                        <svg id="icon-show-kpw" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg id="icon-hide-kpw" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </span>
                 </div>
             </div>
             <div class="form-group">
@@ -139,14 +157,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <script>
-    function togglePass(id, el) {
-        const input = document.getElementById(id);
+    function togglePass(inputId, showIconId, hideIconId) {
+        const input = document.getElementById(inputId);
+        const iconShow = document.getElementById(showIconId);
+        const iconHide = document.getElementById(hideIconId);
         if (input.type === 'password') {
             input.type = 'text';
-            el.textContent = '🙈';
+            iconShow.style.display = 'none';
+            iconHide.style.display = 'block';
         } else {
             input.type = 'password';
-            el.textContent = '👁️';
+            iconShow.style.display = 'block';
+            iconHide.style.display = 'none';
         }
     }
     </script>
