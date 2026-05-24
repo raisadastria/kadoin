@@ -337,12 +337,13 @@ body.auth-page {
 /* Show/Hide Password */
 .password-wrapper {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .password-wrapper input {
     width: 100%;
     padding-right: 45px;
-    box-sizing: border-box;
 }
 
 .toggle-password {
@@ -354,6 +355,8 @@ body.auth-page {
     user-select: none;
     font-size: 18px;
     color: #888;
+    display: flex;
+    align-items: center;
 }
 
 .toggle-password:hover {
