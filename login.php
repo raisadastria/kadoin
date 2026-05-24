@@ -139,7 +139,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 </div>
             </div>
-        </div>
 
             <button class="login-btn" type="submit">
                 Login
@@ -158,22 +157,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         </form>
     </div>
-    <script>
-    function togglePassword() {
-        const input = document.getElementById('password');
-        const iconShow = document.getElementById('icon-show');
-        const iconHide = document.getElementById('icon-hide');
-        if (input.type === 'password') {
-            input.type = 'text';
-            iconShow.style.display = 'none';
-            iconHide.style.display = 'block';
-        } else {
-            input.type = 'password';
-            iconShow.style.display = 'block';
-            iconHide.style.display = 'none';
-        }
-    }
-</script>
 
     <script>
         function togglePassword() {
