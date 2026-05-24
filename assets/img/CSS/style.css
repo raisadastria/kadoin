@@ -333,6 +333,33 @@ body.auth-page {
     border-color: #a076f9;
     outline: none;
 }
+
+/* Show/Hide Password */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #888;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
 .login-btn {
     width: 100%;
     background: linear-gradient(to right, #b388eb, #8B5CF6);
