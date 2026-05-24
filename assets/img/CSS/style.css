@@ -7,9 +7,8 @@ body {
     color: #4A4A4A;
 }
 
-/* Menggunakan font yang lebih elegan untuk judul jika tersedia */
 h1, h2, h3.brand, .logo a {
-    font-family: 'Poppins', sans-serif; /* Fallback ke Poppins jika Playfair tidak cocok */
+    font-family: 'Poppins', sans-serif;
 }
 
 .main-header-container {
@@ -37,17 +36,16 @@ header.main-header .logo a {
     letter-spacing: -1px;
 }
 
-/* Navigasi Desktop */
 header.main-header .main-nav {
     display: flex;
     align-items: center;
-    gap: 10px; /* Jarak antar item navigasi utama */
+    gap: 10px;
 }
 
 header.main-header .main-nav-links {
     display: flex;
     align-items: center;
-    gap: 18px; /* Jarak antar link */
+    gap: 18px;
 }
 
 header.main-header .main-nav-links a {
@@ -59,12 +57,11 @@ header.main-header .main-nav-links a {
     padding: 5px 0;
 }
 header.main-header .main-nav-links a:hover,
-header.main-header .main-nav-links a.active { /* Class 'active' untuk halaman saat ini */
+header.main-header .main-nav-links a.active {
     color: #a076f9;
     border-bottom: 2px solid #a076f9;
 }
 
-/* Search Form Styling */
 .search-form {
     display: flex;
     align-items: center;
@@ -102,7 +99,6 @@ header.main-header .main-nav-links a.active { /* Class 'active' untuk halaman sa
     width: 16px; height: 16px;
 }
 
-/* User Actions (Cart, Profile) */
 .user-actions {
     display: flex;
     align-items: center;
@@ -138,10 +134,9 @@ header.main-header .main-nav-links a.active { /* Class 'active' untuk halaman sa
     color: #a076f9;
 }
 
-/* Tombol daftar */
 .btn-primary {
     background-color: #a076f9;
-    color: white !important; /* !important untuk menimpa style 'a' */
+    color: white !important;
     padding: 7px 14px;
     border-radius: 5px;
     font-size: 0.85em;
@@ -154,9 +149,8 @@ main.site-main-content {
     padding-top: 20px;
 }
 
-/* Tombol Hamburger Menu (Hanya tampil di mobile) */
 .mobile-nav-toggle {
-    display: none; /* Sembunyikan di desktop */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -175,26 +169,21 @@ main.site-main-content {
 /* =================================================================== */
 
 @media (max-width: 768px) {
-    /* Sembunyikan link navigasi dan search form di tablet/mobile */
     header.main-header .main-nav {
-        display: none; /* Sembunyikan navigasi utama */
+        display: none;
     }
     
-    /* Tampilkan tombol hamburger */
     .mobile-nav-toggle {
         display: block; 
     }
 
-    
-
-    /* Navigasi mobile yang muncul */
     header.main-header .main-nav.mobile-active {
         display: flex;
         flex-direction: column;
-        align-items: stretch; /* Buat item memenuhi lebar */
+        align-items: stretch;
         gap: 0;
         position: absolute;
-        top: 100%; /* Muncul tepat di bawah header */
+        top: 100%;
         left: 0;
         right: 0;
         background-color: white;
@@ -203,8 +192,8 @@ main.site-main-content {
         z-index: 999;
     }
     .main-nav.mobile-active .main-nav-links {
-        flex-direction: column; /* Susun link ke bawah */
-        align-items: flex-start; /* Rata kiri */
+        flex-direction: column;
+        align-items: flex-start;
         gap: 0;
         width: 100%;
     }
@@ -217,7 +206,7 @@ main.site-main-content {
         background-color: #f8f0ff;
     }
     .main-nav.mobile-active .search-form {
-        margin: 15px 0 0 0; /* Posisikan search form di bawah link */
+        margin: 15px 0 0 0;
         width: 100%;
     }
     .main-nav.mobile-active .search-form input[type="text"] {
@@ -227,20 +216,17 @@ main.site-main-content {
 
 @media (max-width: 480px) {
     header.main-header .logo a {
-        font-size: 1.5em; /* Kecilkan logo di layar sangat kecil */
+        font-size: 1.5em;
     }
     .user-actions {
-        gap: 10px; /* Kurangi jarak antar ikon */
+        gap: 10px;
     }
 }
 
-/* --- STYLING IKON HAMBURGER BARU --- */
-
 .mobile-nav-toggle .icon-close {
-    display: none; /* Sembunyikan ikon X secara default */
+    display: none;
 }
 
-/* Saat menu aktif, tampilkan ikon X dan sembunyikan ikon hamburger */
 .mobile-nav-toggle.is-active .icon-menu {
     display: none;
 }
@@ -252,7 +238,6 @@ main.site-main-content {
 /* ============= AUTHENTICATION PAGE STYLES (LOGIN/REGISTER) ========= */
 /* =================================================================== */
 
-/* Body khusus untuk halaman login/register */
 body.auth-page {
     display: flex;
     height: 100vh;
@@ -461,69 +446,6 @@ body.auth-page {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f8f0ff; /* Warna background ungu muda seperti hero */
-    text-align: center;
-    padding: 20px;
-}
-
-.logout-box {
-    background-color: #fff;
-    padding: 40px 50px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.logout-box h2 {
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 8px;
-    font-size: 24px;
-}
-
-.logout-box p {
-    color: #555;
-    margin-bottom: 25px;
-}
-
-.logout-box .redirect-info {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 20px;
-}
-
-.logout-box .home-link {
-    color: #a076f9;
-    text-decoration: none;
-    font-weight: 500;
-}
-.logout-box .home-link:hover {
-    text-decoration: underline;
-}
-
-/* Animasi Spinner Sederhana */
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3; /* Lingkaran abu-abu muda */
-    border-top: 5px solid #a076f9; /* Bagian atas ungu yang akan berputar */
-    border-radius: 50%;
-    margin: 0 auto;
-    animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* =================================================================== */
-/* ============= AUTHENTICATION PAGE STYLES (LOGIN/REGISTER) ========= */
-/* =================================================================== */
-
-/* Body khusus untuk halaman login/register */
-body.auth-page {
-    display: flex;
-    min-height: 100vh; /* min-height agar bisa di-scroll */
     background: linear-gradient(to right, #EAD6EE 0%, #FDFEFF 60%); 
 }
 
@@ -537,6 +459,9 @@ body.auth-page {
     padding: 40px;
     color: white;
     text-align: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 .left-panel img {
     max-width: 80%;
@@ -564,15 +489,16 @@ body.auth-page {
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     box-shadow: -10px 0px 30px rgba(0,0,0,0.1);
-    overflow-y: auto; /* Agar bisa di-scroll jika kontennya panjang */
+    overflow-y: auto;
 }
 .right-panel h1 {
     font-size: 28px;
     font-weight: 600;
     color: #333;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 .right-panel .subtitle {
     font-size: 1em;
@@ -596,6 +522,7 @@ body.auth-page {
     border-radius: 8px;
     font-size: 1em;
     transition: border-color 0.2s;
+    box-sizing: border-box;
 }
 .form-group textarea {
     resize: vertical;
@@ -612,8 +539,36 @@ body.auth-page {
     margin-top: 4px;
 }
 
+/* Show/Hide Password */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+}
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+.toggle-password:hover {
+    color: #333;
+}
+
 /* Tombol utama (login/register) */
 .login-btn, .create-btn {
+.login-btn {
     width: 100%;
     background: linear-gradient(to right, #b388eb, #8B5CF6);
     color: white;
@@ -656,9 +611,8 @@ body.auth-page {
     text-align: left;
 }
 
-/* Link-link bawah */
 .create-account, .login-link {
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 0.95em;
     color: #555;
     text-align: center;
@@ -672,7 +626,7 @@ body.auth-page {
     text-decoration: underline;
 }
 .terms {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 13px;
     color: #666;
     text-align: center;
@@ -683,45 +637,108 @@ body.auth-page {
 }
 .back-to-home {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     font-size: 0.9em;
 }
-.back-to-home a{
+.back-to-home a {
     color: #777;
     text-decoration: none;
 }
-.back-to-home a:hover{
+.back-to-home a:hover {
     text-decoration: underline;
 }
-
 
 /* =================================================================== */
 /* ============ FIX UNTUK HALAMAN AUTH DI MOBILE =================== */
 /* =================================================================== */
 @media (max-width: 768px) {
     body.auth-page {
-        flex-direction: column; /* Ubah susunan menjadi vertikal */
-        height: auto; /* Tinggi otomatis */
-        background: #fff; /* Background putih saja di mobile */
+        flex-direction: column;
+        height: auto;
+        background: #fff;
     }
 
     .left-panel {
-        display: none; /* Sembunyikan panel kiri di mobile */
+        display: none;
     }
 
     .right-panel {
-        flex: 1; /* Ambil seluruh sisa ruang */
+        flex: 1;
         width: 100%;
-        border-radius: 0; /* Hapus sudut melengkung */
-        box-shadow: none; /* Hapus bayangan */
-        padding: 40px 25px; /* Sesuaikan padding untuk mobile */
+        border-radius: 0;
+        box-shadow: none;
+        padding: 40px 25px;
     }
 
     .right-panel h1 {
-        font-size: 24px; /* Kecilkan font judul */
+        font-size: 24px;
     }
 }
 
+
+/* =================================================================== */
+/* ==================== LOGOUT PAGE STYLES ========================= */
+/* =================================================================== */
+
+.logout-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f0ff;
+    text-align: center;
+    padding: 20px;
+}
+
+.logout-box {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.logout-box h2 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.logout-box p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.logout-box .redirect-info {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.logout-box .home-link {
+    color: #a076f9;
+    text-decoration: none;
+    font-weight: 500;
+}
+.logout-box .home-link:hover {
+    text-decoration: underline;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #a076f9;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 
 /* =================================================================== */
@@ -763,14 +780,12 @@ body.auth-page {
     margin-right: 8px;
 }
 
-/* Layout Utama: Galeri & Info */
 .product-detail-main-layout {
     display: flex;
     flex-wrap: wrap;
     gap: 35px;
 }
 
-/* Bagian Galeri Gambar */
 .product-gallery {
     flex: 1 1 500px;
     display: flex;
@@ -823,7 +838,6 @@ body.auth-page {
     border: 1px solid #eee;
 }
 
-/* Bagian Info & Aksi Produk */
 .product-info-action-detail {
     flex: 1 1 450px;
     padding-left: 15px;
@@ -856,7 +870,6 @@ body.auth-page {
     font-size: 0.95em;
 }
 
-/* Form Kontrol (Qty, Catatan, Tombol) */
 .quantity-control {
     margin-bottom: 25px;
     display: flex;
@@ -900,7 +913,6 @@ body.auth-page {
     border: none;
     text-align: center;
     font-size: 1em;
-    /* -moz-appearance: textfield; Firefox */
 }
 .quantity-stock-info {
     color: #777;
@@ -924,7 +936,6 @@ body.auth-page {
     width: 100%; padding: 16px 25px; background-color: #e9ecef; color: #6c757d; border: 1px solid #ced4da; border-radius: 8px; font-size: 1.1em; font-weight: 600; cursor: not-allowed;
 }
 
-/* Seksi Rekomendasi */
 .rekomendasi-section {
     margin-top: 60px;
     padding-top: 40px;
@@ -948,12 +959,11 @@ body.auth-page {
     }
     
     .product-detail-main-layout {
-        flex-direction: column; /* Susun ke bawah */
+        flex-direction: column;
         gap: 25px;
     }
 
     .product-gallery {
-        /* Pindah thumbnail ke bawah gambar utama */
         flex-direction: column-reverse; 
     }
     .main-image-container {
@@ -961,13 +971,11 @@ body.auth-page {
     }
 
     .thumbnail-column {
-        /* Ubah jadi baris horizontal yang bisa di-scroll */
         flex-direction: row;
         overflow-x: auto;
         overflow-y: hidden;
-        max-height: none; /* Hapus batas tinggi */
+        max-height: none;
         padding: 5px 0;
-        /* Tambahkan style untuk scrollbar agar tidak terlalu tebal */
         scrollbar-width: thin;
         scrollbar-color: #ccc #f1f1f1;
     }
@@ -979,11 +987,11 @@ body.auth-page {
         border-radius: 10px;
     }
     .thumbnail-column img {
-        width: 65px; height: 65px; flex-shrink: 0; /* Agar tidak menyusut */
+        width: 65px; height: 65px; flex-shrink: 0;
     }
 
     .product-info-action-detail {
-        padding-left: 0; /* Hapus padding kiri di mobile */
+        padding-left: 0;
     }
     .product-info-action-detail h1 {
         font-size: 1.8em;
@@ -1028,7 +1036,6 @@ body.auth-page {
 
 .cart-empty-message { text-align: center; font-size: 1.1em; color: #665; padding: 50px 0; }
 
-/* Header Tabel - HANYA TAMPIL DI DESKTOP */
 .cart-table-header {
     display: grid;
     grid-template-columns: 50px 1fr 120px 130px 120px 80px;
@@ -1041,7 +1048,6 @@ body.auth-page {
     border-bottom: 1px solid #e0cde3;
 }
 
-/* Kartu Item Produk */
 .cart-item-card {
     display: grid;
     grid-template-columns: 50px 1fr 120px 130px 120px 80px;
@@ -1067,10 +1073,8 @@ body.auth-page {
 .item-subtotal { text-align: right; font-weight: 600; color: #77569a; font-size: 1em; }
 .item-remove-link { text-align: center; }
 .item-remove-link a { color: #E57373; text-decoration: none; font-size: 0.9em; font-weight: 500; }
-.item-actions-row { display: none; } /* Sembunyikan di desktop */
+.item-actions-row { display: none; }
 
-
-/* Ringkasan Belanja */
 .cart-summary-footer { margin-top: 30px; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
 .summary-actions { display: flex; align-items: center; }
 .summary-actions label { font-size: 0.95em; font-weight: 500; cursor: pointer; }
@@ -1087,10 +1091,10 @@ body.auth-page {
 @media (max-width: 768px) {
     .cart-wrapper { padding: 15px; }
     .cart-header-nav h1 { font-size: 1.4em; }
-    .cart-table-header { display: none; } /* Sembunyikan header tabel */
+    .cart-table-header { display: none; }
 
     .cart-item-card {
-        display: block; /* Ubah dari grid menjadi block */
+        display: block;
         position: relative;
         padding: 15px;
     }
@@ -1098,7 +1102,6 @@ body.auth-page {
     .product-details img { width: 65px; height: 65px; }
     .product-info .product-name { font-size: 0.9em; }
     
-    /* Sembunyikan elemen-elemen grid desktop */
     .cart-item-card .item-checkbox-container,
     .cart-item-card .item-price,
     .cart-item-card .item-subtotal,
@@ -1106,7 +1109,6 @@ body.auth-page {
         display: none;
     }
     
-    /* Tampilkan baris aksi mobile */
     .item-actions-row {
         display: flex;
         justify-content: space-between;
@@ -1116,9 +1118,8 @@ body.auth-page {
         border-top: 1px solid #f0f0f0;
     }
     .item-price-mobile { font-size: 1em; font-weight: 600; color: #77569a; }
-    .item-remove-link { position: absolute; top: 10px; right: 10px; } /* Pindah tombol hapus */
+    .item-remove-link { position: absolute; top: 10px; right: 10px; }
 
-    /* Tata letak footer ringkasan */
     .cart-summary-footer { flex-direction: column; align-items: stretch; }
     .summary-total { justify-content: space-between; width: 100%; }
     .checkout-button { width: 100%; text-align: center; margin-top: 10px; }
