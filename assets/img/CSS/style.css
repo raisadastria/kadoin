@@ -343,6 +343,7 @@ body.auth-page {
 .password-wrapper input {
     width: 100%;
     padding-right: 45px;
+    box-sizing: border-box;
 }
 .toggle-password {
     position: absolute;
@@ -362,6 +363,7 @@ body.auth-page {
 
 /* Tombol utama (login/register) */
 .login-btn, .create-btn {
+.login-btn {
     width: 100%;
     background: linear-gradient(to right, #b388eb, #8B5CF6);
     color: white;

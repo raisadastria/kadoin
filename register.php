@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body class="auth-page">
     <div class="left-panel">
-        <img src="assets/img/logo.png" alt="Ilustrasi Bunga KadoIn" />
+        <img src="assets/img/bunga.png" alt="Ilustrasi Bunga KadoIn" />
         <div class="logo-text">
             <div class="top">Bergabunglah Bersama Kami</div>
             <div class="bottom">KADOIN.</div>
