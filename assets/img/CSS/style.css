@@ -328,6 +328,7 @@ body.auth-page {
     border-radius: 8px;
     font-size: 1em;
     transition: border-color 0.2s;
+    box-sizing: border-box;
 }
 .form-group input:focus {
     border-color: #a076f9;
