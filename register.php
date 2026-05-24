@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="left-panel">
         <img src="assets/img/bunga.png" alt="Ilustrasi Bunga KadoIn" />
         <div class="logo-text">
-            <div class="top">Bergabunglah Bersama Kami</div>
+            <div class="top">Bergabunglah Bersama Kami!</div>
             <div class="bottom">KADOIN.</div>
         </div>
     </div>
