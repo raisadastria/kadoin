@@ -117,6 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-group">
+<<<<<<< HEAD
     <label for="password">Password</label>
     <div class="password-wrapper">
         <input 
@@ -127,6 +128,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             required
         >
                 <span class="toggle-password" onclick="togglePassword()">
+=======
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Minimal 6 karakter"
+                        required
+                    >
+                    <span class="toggle-password" onclick="togglePassword()">
+>>>>>>> 254a2cdb2f301046535a1e7915dd1333ee6f67b7
                     <svg id="icon-show" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
@@ -136,6 +149,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <line x1="1" y1="1" x2="23" y2="23"></line>
                     </svg>
                 </span>
+<<<<<<< HEAD
+=======
+                </div>
+>>>>>>> 254a2cdb2f301046535a1e7915dd1333ee6f67b7
             </div>
         </div>
 
@@ -173,5 +190,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 </script>
 
+    <script>
+        function togglePassword() {
+            const input = document.getElementById('password');
+            const iconShow = document.getElementById('icon-show');
+            const iconHide = document.getElementById('icon-hide');
+            if (input.type === 'password') {
+                input.type = 'text';
+                iconShow.style.display = 'none';
+                iconHide.style.display = 'block';
+            } else {
+                input.type = 'password';
+                iconShow.style.display = 'block';
+                iconHide.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

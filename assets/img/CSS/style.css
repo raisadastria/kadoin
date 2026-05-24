@@ -334,6 +334,7 @@ body.auth-page {
     outline: none;
 }
 
+<<<<<<< HEAD
 .form-group input:focus {
     border-color: #a076f9;
     outline: none;
@@ -345,21 +346,44 @@ body.auth-page {
     display: flex;
     align-items: center;
 }
+=======
+/* Show/Hide Password */
+.password-wrapper {
+    position: relative;
+}
+
+>>>>>>> 254a2cdb2f301046535a1e7915dd1333ee6f67b7
 .password-wrapper input {
     width: 100%;
     padding-right: 45px;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 254a2cdb2f301046535a1e7915dd1333ee6f67b7
 .toggle-password {
     position: absolute;
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+<<<<<<< HEAD
     color: #888;
     display: flex;
     align-items: center;
 }
+=======
+    user-select: none;
+    font-size: 18px;
+    color: #888;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+>>>>>>> 254a2cdb2f301046535a1e7915dd1333ee6f67b7
 .login-btn {
     width: 100%;
     background: linear-gradient(to right, #b388eb, #8B5CF6);
