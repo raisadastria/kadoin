@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="right-panel">
         <h1>Welcome Back!</h1>
-        <p class="subtitle">Silakan login untuk melanjutkan belanja.</p>
+        <p class="subtitle">Silakan login, hadiah menanti kamu!</p>
 
         <?php if ($notification_data && $notification_data['type'] == 'success'): ?>
             <p class="notification-message">
