@@ -104,12 +104,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required aria-describedby="passwordHelp" />
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" required aria-describedby="passwordHelp" />
+                    <span class="toggle-password" onclick="togglePass('password', this)">👁️</span>
+                </div>
                 <small id="passwordHelp">Minimal 6 karakter.</small>
             </div>
             <div class="form-group">
                 <label for="konfirmasi_password">Konfirmasi Password</label>
-                <input type="password" id="konfirmasi_password" name="konfirmasi_password" required />
+                <div class="password-wrapper">
+                    <input type="password" id="konfirmasi_password" name="konfirmasi_password" required />
+                    <span class="toggle-password" onclick="togglePass('konfirmasi_password', this)">👁️</span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="telepon">Nomor Telepon (Opsional)</label>
@@ -131,5 +137,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </form>
     </div>
+
+    <script>
+    function togglePass(id, el) {
+        const input = document.getElementById(id);
+        if (input.type === 'password') {
+            input.type = 'text';
+            el.textContent = '🙈';
+        } else {
+            input.type = 'password';
+            el.textContent = '👁️';
+        }
+    }
+    </script>
 </body>
 </html>
